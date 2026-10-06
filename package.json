@@ -1,0 +1,16 @@
+{
+  "name": "stock-management-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "npm --prefix web run build",
+    "start": "npm --prefix web run build && npm --prefix backend start",
+    "dev": "npm --prefix web run build && npm --prefix backend dev",
+    "dev:watch": "concurrently -n \"BACKEND,FRONTEND\" -c \"cyan.bold,magenta.bold\" \"npm --prefix backend run dev\" \"npm --prefix web run dev\"",
+    "backend": "npm --prefix backend run dev",
+    "web": "npm --prefix web run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
